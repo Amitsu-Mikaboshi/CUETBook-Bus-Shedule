@@ -31,7 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amberAccent,
-        title: Text('CUET BUS SHEDULE'),
+        title: Text('CUET BUS SHEDULE',style: TextStyle(fontWeight: FontWeight.bold),),
+
       ),
       body: Center(
         child: Column(
@@ -40,16 +41,76 @@ class _MyHomePageState extends State<MyHomePage> {
             DataTable(
               columns: [
                 DataColumn(
-                  label: Text('ID'),
+                  label: Text('Bus'),
+                ),
+
+                DataColumn(
+                  label: Text('Time'),
+                ),
+
+                DataColumn(
+                  label: Text('Departure Place'),
                 ),
               ],
               rows: [
                 DataRow(
-                  cells: DataCell(
+                  cells: [DataCell(
                     Text(
-                      'nahim',
+                      'Jomuna',
                     ),
                   ),
+
+                    DataCell(
+                      Text(
+                        '5.00am',
+                      ),
+                    ),
+
+                    DataCell(
+                      Text(
+                        'CUET',
+                      ),
+                    ),]
+                ),
+
+                DataRow(
+                    cells: [DataCell(
+                      Text(
+                        'Padma',
+                      ),
+                    ),
+
+                      DataCell(
+                        Text(
+                          '7.00am',
+                        ),
+                      ),
+
+                      DataCell(
+                        Text(
+                          'CUET',
+                        ),
+                      ),]
+                ),
+
+                DataRow(
+                    cells: [DataCell(
+                      Text(
+                        'buriganga',
+                      ),
+                    ),
+
+                      DataCell(
+                        Text(
+                          '7.00am',
+                        ),
+                      ),
+
+                      DataCell(
+                        Text(
+                          'CUET',
+                        ),
+                      ),]
                 ),
               ],
             ),
