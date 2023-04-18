@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: MyHomePage(),
     );
@@ -31,12 +31,18 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amberAccent,
-        title: Text(
-          'CUET BUS SHEDULE',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: Center(
+          child: Text(
+            'CUET BUS SHEDULE',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        leading: new IconButton(
+          icon: new Icon(Icons.arrow_back_ios),
+          onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: Center(
+      body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -54,25 +60,44 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
               rows: const [
                 DataRow(cells: [
-                  DataCell(Text('Jomuna')),
-                  DataCell(Text('5.00am')),
+                  DataCell(Text('ALL')),
+                  DataCell(Text('6.00am')),
                   DataCell(Text('CUET')),
                 ]),
                 DataRow(cells: [
-                  DataCell(Text('Padma')),
-                  DataCell(Text('7.00am')),
+                  DataCell(Text('ALL')),
+                  DataCell(Text('7.15am')),
+                  DataCell(Text('Rastar Matha')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('ALL')),
+                  DataCell(Text('2.35pm')),
                   DataCell(Text('CUET')),
                 ]),
                 DataRow(cells: [
-                  DataCell(Text('buriganga')),
-                  DataCell(Text('7.00am')),
-                  DataCell(Text('CUET')),
+                  DataCell(Text('ALL')),
+                  DataCell(Text('4.15pm')),
+                  DataCell(Text('Station')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('ALL')),
+                  DataCell(Text('7.15pm')),
+                  DataCell(Text('Station')),
                 ]),
               ],
             ),
+            SizedBox(width: double.infinity),
           ],
         ),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.orange.withOpacity(0.2), BlendMode.dstATop),
+            image: ExactAssetImage('images/totoro.png'),
+          ),
+        ),
       ),
+      backgroundColor: Colors.orange[400],
     );
   }
 }
