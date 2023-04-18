@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             DataTable(
-              columns: [
+              columns: const [
                 DataColumn(
                   label: Text('Bus'),
                 ),
@@ -52,8 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   label: Text('Departure Place'),
                 ),
               ],
-              rows: [
+              rows: const [
                 DataRow(
+
                   cells: [DataCell(
                     Text(
                       'Jomuna',
@@ -94,25 +95,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
                 DataRow(
-                    cells: [DataCell(
+                  cells: [DataCell(
+                    Text(
+                      'buriganga',
+                    ),
+                  ),
+
+                    DataCell(
                       Text(
-                        'buriganga',
+                        '7.00am',
                       ),
                     ),
 
-                      DataCell(
-                        Text(
-                          '7.00am',
-                        ),
+                    DataCell(
+                      Text(
+                        'CUET',
                       ),
-
-                      DataCell(
-                        Text(
-                          'CUET',
-                        ),
-                      ),]
-                ),
-              ],
+                    ),
+                  ]
             ),
           ],
         ),
